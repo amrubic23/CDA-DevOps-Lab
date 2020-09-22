@@ -73,7 +73,7 @@ namespace WebApplication2
 
         public string encrypt(string encryptString)
         {
-            string EncryptionKey = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string EncryptionKey = "CDA DevOps Lab Build";
             byte[] clearBytes = Encoding.Unicode.GetBytes(encryptString);
             using (Aes encryptor = Aes.Create())
             {
@@ -97,7 +97,7 @@ namespace WebApplication2
 
         public string Decrypt(string cipherText)
         {
-            string EncryptionKey = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string EncryptionKey = "CDA DevOps Lab Build";
             cipherText = cipherText.Replace(" ", "+");
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
             using (Aes encryptor = Aes.Create())
